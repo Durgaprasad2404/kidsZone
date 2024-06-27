@@ -1,0 +1,8 @@
+.learn-box {
+    border-radius: 0% 38% 0% 38% / 10% 38% 10% 38%;
+    border: 1px solid black;
+
+    &:hover {
+        transform: translateY(10px);
+    }
+}
