@@ -10,8 +10,8 @@ function Learn() {
   return (
     <div className="bg-cyan-100 py-10">
       <h1 className="text-4xl text-center font-bold py-5 font-comic decoration-yellow-500 underline underline-offset-8">
-        <span className="text-xl">&#127872;</span>Learn Our Alphabets
-        <span className="text-xl">&#127872;</span>
+        <span className="text-3xl">&#127872;</span>Learn Alphabets
+        <span className="text-3xl">&#127872;</span>
       </h1>
       <div className="flex flex-col lg:flex-row items-center max-w-7xl mx-auto p-5">
         <div className="flex-1 mb-8 lg:mb-0">
