@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 function About() {
   return (
     <>
-      <section className="bg-cyan-100">
+      <section className="bg-cyan-50">
         <div className="bg-cyan-400">
           <Navbar />
         </div>

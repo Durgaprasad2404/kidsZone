@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  FaHome,
-  FaInfoCircle,
-  FaServicestack,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaHome, FaInfoCircle, FaGamepad, FaEnvelope } from "react-icons/fa";
+import { MdMenuBook } from "react-icons/md";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,30 +12,42 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="flex justify-between items-center pt-16 p-5">
-        <div className="text-4xl font-bold font-comic">.KidsZone</div>
+      <div className="flex justify-between items-center md:flex-wrap pt-12 p-5">
+        <Link
+          to="/"
+          className="no-underline text-black selection:bg-red-400"
+          onClick={() => window.reload()}
+        >
+          <div className="text-4xl font-bold font-comic">.KidsZone</div>
+        </Link>
         <div className="hidden md:flex space-x-6">
           <Link
             to="/"
-            className="flex items-center text-black text-2xl font-comic font-semibold px-3 py-2 rounded-full hover:bg-pink-500 hover:text-white no-underline hover:font-bold"
+            className="flex items-center text-black text-2xl font-comic font-semibold px-2 py-2 rounded-full hover:bg-pink-500 hover:text-white no-underline hover:font-bold"
           >
             <FaHome className="mr-2" /> Home
           </Link>
           <Link
             to="/about"
-            className="flex items-center text-black text-2xl font-comic font-semibold px-3 py-2 rounded-full hover:bg-pink-500 hover:text-white no-underline hover:font-bold"
+            className="flex items-center text-black text-2xl font-comic font-semibold px-2 py-2 rounded-full hover:bg-pink-500 hover:text-white no-underline hover:font-bold"
           >
             <FaInfoCircle className="mr-2" /> About
           </Link>
           <Link
-            to="/games"
-            className="flex items-center text-black text-2xl font-comic font-semibold px-3 py-2 rounded-full hover:bg-pink-500 hover:text-white no-underline hover:font-bold"
+            to="/stories"
+            className="flex items-center text-black text-2xl font-comic font-semibold px-2 py-2 rounded-full hover:bg-pink-500 hover:text-white no-underline hover:font-bold"
           >
-            <FaServicestack className="mr-2" /> Games
+            <MdMenuBook className="mr-2" /> Stories
+          </Link>
+          <Link
+            to="/games"
+            className="flex items-center text-black text-2xl font-comic font-semibold px-2 py-2 rounded-full hover:bg-pink-500 hover:text-white no-underline hover:font-bold"
+          >
+            <FaGamepad className="mr-2" /> Games
           </Link>
           <Link
             to="/contactus"
-            className="flex items-center text-black text-2xl font-comic font-semibold px-3 py-2 rounded-full hover:bg-pink-500 hover:text-white no-underline hover:font-bold"
+            className="flex items-center text-black text-2xl font-comic font-semibold px-2 py-2 rounded-full hover:bg-pink-500 hover:text-white no-underline hover:font-bold"
           >
             <FaEnvelope className="mr-2" /> Contact Us
           </Link>
@@ -69,11 +77,17 @@ const Navbar = () => {
           <FaInfoCircle className="mr-2" /> About
         </Link>
         <Link
+          to="/stories"
+          className="flex items-center text-black text-2xl font-comic font-semibold px-4 py-2 rounded-full hover:bg-pink-500 hover:text-white no-underline hover:font-bold"
+        >
+          <MdMenuBook className="mr-2" /> Stories
+        </Link>
+        <Link
           to="/games"
           className="flex items-center px-4 py-2 text-black text-2xl font-comic font-semibold hover:bg-pink-500 hover:text-white no-underline hover:font-bold"
           onClick={toggleMenu}
         >
-          <FaServicestack className="mr-2" /> Games
+          <FaGamepad className="mr-2" /> Games
         </Link>
         <Link
           to="/contactus"

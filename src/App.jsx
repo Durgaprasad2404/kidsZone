@@ -15,6 +15,7 @@ import Numbers from "./components/LettersSpeak/Numbers";
 import Hindi from "./components/LettersSpeak/Hindi";
 import Telugu from "./components/LettersSpeak/Telugu";
 import About from "./components/About";
+import Stories from "./components/Stories";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/games" element={<Games />} />
           <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/stories" element={<Stories />} />
           {/* alphabets */}
           <Route path="/ENalphas" element={<English />} />
           <Route path="/numbers" element={<Numbers />} />
